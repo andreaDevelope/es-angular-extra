@@ -1,0 +1,44 @@
+[
+    {
+        "name": "fighter-1.jpg",
+        "size": 205517,
+        "type": "image",
+        "path": "../assets/media/fighter1.jpg"
+    },
+    {
+        "name": "fighter-2.jpg",
+        "size": 48960,
+        "type": "image",
+        "path": "../assets/media/fighter2.jpg"
+    },
+    {
+        "name": "fighter-3.jpg",
+        "size": 8495,
+        "type": "image",
+        "path": "../assets/media/fighter3.jpg"
+    },
+    {
+        "name": "fighter-4.jpg",
+        "size": 119217,
+        "type": "image",
+        "path": "../assets/media/fighter4.jpg"
+    },
+    {
+        "name": "fighter-5.jpg",
+        "size": 63731,
+        "type": "image",
+        "path": "../assets/media/fighter5.jpg"
+    },
+    {
+        "name": "fight-1.mp4",
+        "size": 1049825,
+        "type": "video",
+        "path": "../assets/media/fight1.mp4"
+    },
+    {
+        "name": "fight-2.mp4",
+        "size": 2155871,
+        "type": "video",
+        "path": "../assets/media/fight2.mp4"
+    }
+]

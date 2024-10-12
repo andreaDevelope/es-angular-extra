@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: red !important;
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+button,
+a {
+  &:hover {
+    scale: 1.1;
+  }
+}
+
+main img {
+  height: 250px;
+}
+
+main {
+  min-height: 60vh;
+  padding-bottom: 3rem;
+  background-image: url("https://media.istockphoto.com/id/1158543289/photo/3d-render-mma-arena-mma-octagon-cages.jpg?s=170667a&w=0&k=20&c=PSXNkeQBewcXKErO2px_2LGk43DjO63YhUgS8SIfXhw=");
+  background-size: cover;
+  background-position: center;
+  perspective: 1000px;
+}
+
+* {
+  color: white;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
