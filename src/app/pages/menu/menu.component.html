@@ -1,0 +1,34 @@
+<main>
+  <div class="container pt-5">
+    <div class="package mx-auto" (click)="openPack()"></div>
+    <ng-container *ngFor="let card of myDeck">
+      <div class="container" *ngIf="open">
+        <div class="row justify-content-center">
+          <div
+            class="col-12 col-md-6 col-lg-4 my-3 d-flex flex-column align-items-center"
+          >
+            <div class="card bg-black">
+              <img
+                src="{{ card.path }}"
+                class="card-img-top"
+                alt="img-fhigter"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center">{{ card.name }}</h5>
+                <p class="card-text">attacco base {{ card.attacco_base }}</p>
+                <p class="card-text">
+                  attacco speciale {{ card.attacco_speciale }}
+                </p>
+                <p class="card-text">stamina {{ card.stamina }}</p>
+                <p class="card-text">vita {{ card.vita }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center" *ngIf="open">
+        <a [routerLink]="['/arena', param]" class="btn btn-primary">FIGHT</a>
+      </div>
+    </ng-container>
+  </div>
+</main>

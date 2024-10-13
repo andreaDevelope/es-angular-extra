@@ -9,6 +9,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { VideoComponent } from './pages/video/video.component';
 import { FigtherComponent } from './pages/figther/figther.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { MenuComponent } from './pages/menu/menu.component';
+import { ArenaComponent } from './pages/arena/arena.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     HomeComponent,
     VideoComponent,
     FigtherComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    MenuComponent,
+    ArenaComponent
   ],
   imports: [
     BrowserModule,
