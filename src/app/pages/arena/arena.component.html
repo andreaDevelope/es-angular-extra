@@ -1,1 +1,62 @@
-<p>arena works!</p>
+<main>
+  <div class="container" *ngIf="myDeck2.length > 0">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 my-3 d-flex flex-column align-items-center">
+        <h2>IL TUO CAMPIONE</h2>
+        <div class="card bg-black">
+          <img
+            src="{{ myDeck2[numRnd].path }}"
+            class="card-img-top"
+            alt="img-fhigter"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ myDeck2[numRnd].name }}</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text">
+                attacco base {{ myDeck2[numRnd].attacco_base }}
+              </p>
+              <button *ngIf="isDisable" class="btn btn-primary">ATTACK</button>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text">
+                attacco speciale {{ myDeck2[numRnd].attacco_speciale }}
+              </p>
+              <button *ngIf="isDisable" class="btn btn-primary">ATTACK</button>
+            </div>
+            <p class="card-text">stamina {{ myDeck2[numRnd].stamina }}</p>
+            <p class="card-text">vita {{ myDeck2[numRnd].vita }}</p>
+          </div>
+        </div>
+      </div>
+      <!-- ----------------------------------------------------------------- -->
+
+      <div class="col-12 col-md-6 my-3 d-flex flex-column align-items-center">
+        <h2>AVVERSARIO</h2>
+        <div class="card bg-black">
+          <img
+            src="{{ compDeck[numRnd].path }}"
+            class="card-img-top"
+            alt="img-fhigter"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">{{ compDeck[numRnd].name }}</h5>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text">
+                attacco base {{ compDeck[numRnd].attacco_base }}
+              </p>
+              <button *ngIf="!isDisable" class="btn btn-primary">ATTACK</button>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <p class="card-text">
+                attacco speciale {{ compDeck[numRnd].attacco_speciale }}
+              </p>
+              <button *ngIf="!isDisable" class="btn btn-primary">ATTACK</button>
+            </div>
+            <p class="card-text">stamina {{ compDeck[numRnd].stamina }}</p>
+            <p class="card-text">vita {{ compDeck[numRnd].vita }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

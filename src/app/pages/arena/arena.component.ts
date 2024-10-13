@@ -9,9 +9,13 @@ import { iMedia } from '../../module/i-media';
 })
 export class ArenaComponent {
   constructor(private route: ActivatedRoute) {}
+  myDeck2: iMedia[] = [];
+  isDisable: boolean = true;
+
+  numRnd: number = Math.floor(Math.random() * this.myDeck2.length + 1);
 
   myDeck: string[] = [];
-  myDeck2: iMedia[] = [];
+  compDeck: iMedia[] = [];
 
   ngOnInit() {
     this.route.params.subscribe((param) => {
@@ -26,19 +30,24 @@ export class ArenaComponent {
         })
         .then((res) => {
           this.myDeck = name.split('-');
-          this.myDeck = this.myDeck.filter((name) =>
-            name !== '' ? true : false
-          );
-          console.log(this.myDeck);
-          this.myDeck2 = res.filter((card) => {
-            this.myDeck.forEach((name) => {
-              if (card.name === name) {
-                this.myDeck2.push(card);
-              }
-            });
+          this.myDeck = this.myDeck.filter((name) => name !== '');
+
+          console.log('myDeck:', this.myDeck);
+
+          res.forEach((card) => {
+            if (this.myDeck.includes(card.name)) {
+              this.myDeck2.push(card);
+            } else {
+              this.compDeck.push(card);
+            }
           });
+
+          this.compDeck = this.compDeck.splice(0, 3);
+          console.log('avversari:', this.compDeck);
+        })
+        .catch((error) => {
+          console.error('Errore nel fetch:', error);
         });
     });
-    console.log(this.myDeck2);
   }
 }
