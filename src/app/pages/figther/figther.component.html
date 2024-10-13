@@ -1,24 +1,22 @@
 <main>
   <div class="hero pt-4">
-    <h1 class="text-center">LEGIONARI</h1>
+    <h1 class="text-center">FIGHTER</h1>
   </div>
   <div class="container">
     <div class="row justify-content-center">
       <div
         class="col-12 col-md-6 col-lg-4 my-3 d-flex flex-column align-items-center"
-        *ngFor="let img of image"
+        *ngFor="let fi of fighter"
       >
         <div class="card bg-black">
-          <img src="{{ img.path }}" class="card-img-top" alt="img-fhigter" />
+          <img src="{{ fi.path }}" class="card-img-top" alt="img-fhigter" />
           <div class="card-body">
-            <h5 class="card-title text-center">{{ img.name }}</h5>
+            <h5 class="card-title text-center">{{ fi.name }}</h5>
             <p class="card-text">
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <a [routerLink]="['/fighter', img.name]" class="btn btn-primary"
-              >Show</a
-            >
+            <a routerLink="" class="btn btn-primary">Change card</a>
           </div>
         </div>
       </div>

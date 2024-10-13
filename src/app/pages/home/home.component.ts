@@ -20,6 +20,7 @@ export class HomeComponent {
       })
       .then((res) => {
         if (res) {
+          console.log(res);
           this.image = res.filter((media) =>
             media.type === 'image' ? true : false
           );

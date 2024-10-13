@@ -7,6 +7,8 @@ import { HeadersComponent } from './main-components/headers/headers.component';
 import { FooterComponent } from './main-components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { VideoComponent } from './pages/video/video.component';
+import { FigtherComponent } from './pages/figther/figther.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { VideoComponent } from './pages/video/video.component';
     HeadersComponent,
     FooterComponent,
     HomeComponent,
-    VideoComponent
+    VideoComponent,
+    FigtherComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

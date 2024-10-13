@@ -11,10 +11,10 @@
 
 @keyframes stick {
   0% {
-    transform: translateZ(1000px) scale(0);
+    transform: translateZ(1000px) scale(0) rotateY(360deg);
   }
   100% {
-    transform: translateZ(0) scale(1);
+    transform: translateZ(0) scale(1) rotateY(0deg);
   }
 }
 

@@ -19,6 +19,7 @@ export class VideoComponent {
         }
       })
       .then((res) => {
+        console.log(res);
         if (res) {
           this.image = res.filter((media) =>
             media.type === 'image' ? true : false
@@ -27,6 +28,7 @@ export class VideoComponent {
             media.type === 'video' ? true : false
           );
         }
+        console.log(this.video);
       })
       .catch((e) => console.log(e));
   }

@@ -1,44 +1,104 @@
 [
-    {
-        "name": "fighter-1.jpg",
-        "size": 205517,
-        "type": "image",
-        "path": "../assets/media/fighter1.jpg"
-    },
-    {
-        "name": "fighter-2.jpg",
-        "size": 48960,
-        "type": "image",
-        "path": "../assets/media/fighter2.jpg"
-    },
-    {
-        "name": "fighter-3.jpg",
-        "size": 8495,
-        "type": "image",
-        "path": "../assets/media/fighter3.jpg"
-    },
-    {
-        "name": "fighter-4.jpg",
-        "size": 119217,
-        "type": "image",
-        "path": "../assets/media/fighter4.jpg"
-    },
-    {
-        "name": "fighter-5.jpg",
-        "size": 63731,
-        "type": "image",
-        "path": "../assets/media/fighter5.jpg"
-    },
-    {
-        "name": "fight-1.mp4",
-        "size": 1049825,
-        "type": "video",
-        "path": "../assets/media/fight1.mp4"
-    },
-    {
-        "name": "fight-2.mp4",
-        "size": 2155871,
-        "type": "video",
-        "path": "../assets/media/fight2.mp4"
-    }
+  {
+      "name": "Conor Mcgregor",
+      "peso": 65,
+      "attacco_base": 50,
+      "consumo_stamina_attacco_base": 10,
+      "attacco_speciale": 80,
+      "consumo_stamina_attacco_speciale": 20,
+      "stamina": 100,
+      "vita": 150,
+      "type": "image",
+      "path": "../assets/media/Conor Mcgregor"
+  },
+  {
+      "name": "Holloway",
+      "peso": 65,
+      "attacco_base": 55,
+      "consumo_stamina_attacco_base": 12,
+      "attacco_speciale": 85,
+      "consumo_stamina_attacco_speciale": 18,
+      "stamina": 105,
+      "vita": 145,
+      "type": "image",
+      "path": "../assets/media/Holloway"
+  },
+  {
+      "name": "Marvin Vettori",
+      "peso": 65,
+      "attacco_base": 52,
+      "consumo_stamina_attacco_base": 11,
+      "attacco_speciale": 78,
+      "consumo_stamina_attacco_speciale": 19,
+      "stamina": 98,
+      "vita": 155,
+      "type": "image",
+      "path": "../assets/media/Marvin Vettori"
+  },
+  {
+      "name": "Oliviera",
+      "peso": 65,
+      "attacco_base": 60,
+      "consumo_stamina_attacco_base": 14,
+      "attacco_speciale": 90,
+      "consumo_stamina_attacco_speciale": 22,
+      "stamina": 110,
+      "vita": 160,
+      "type": "image",
+      "path": "../assets/media/Oliviera"
+  },
+  {
+      "name": "Poirer",
+      "peso": 65,
+      "attacco_base": 58,
+      "consumo_stamina_attacco_base": 13,
+      "attacco_speciale": 88,
+      "consumo_stamina_attacco_speciale": 21,
+      "stamina": 102,
+      "vita": 148,
+      "type": "image",
+      "path": "../assets/media/Poirer"
+  },
+  {
+      "name": "Raoni Barcelos",
+      "peso": 65,
+      "attacco_base": 53,
+      "consumo_stamina_attacco_base": 12,
+      "attacco_speciale": 84,
+      "consumo_stamina_attacco_speciale": 20,
+      "stamina": 104,
+      "vita": 150,
+      "type": "image",
+      "path": "../assets/media/Raoni Barcelos"
+  },
+  {
+      "name": "Check",
+      "peso": 65,
+      "attacco_base": 56,
+      "consumo_stamina_attacco_base": 15,
+      "attacco_speciale": 87,
+      "consumo_stamina_attacco_speciale": 19,
+      "stamina": 109,
+      "vita": 155,
+      "type": "image",
+      "path": "../assets/media/Check"
+  },
+  {
+      "name": "fight-1.mp4",
+      "size": 1049825,
+      "type": "video",
+      "path": "../assets/media/fight1.mp4"
+  },
+  {
+      "name": "fight-2.mp4",
+      "size": 2155871,
+      "type": "video",
+      "path": "../assets/media/fight2.mp4"
+  },
+  {
+    "name": "video3.mp4",
+    "size": 123456,
+    "type": "video",
+    "path": "../assets/media/fight3.mp4"
+  }
 ]
