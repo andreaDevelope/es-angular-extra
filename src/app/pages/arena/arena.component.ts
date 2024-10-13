@@ -10,6 +10,8 @@ import { iMedia } from '../../module/i-media';
 export class ArenaComponent {
   constructor(private route: ActivatedRoute) {}
   myDeck2: iMedia[] = [];
+  myDeck3: iMedia[] = [];
+
   isDisable: boolean = true;
 
   numRnd: number = Math.floor(Math.random() * this.myDeck2.length + 1);
@@ -41,6 +43,7 @@ export class ArenaComponent {
               this.compDeck.push(card);
             }
           });
+          this.myDeck3 = structuredClone(this.myDeck2);
 
           this.compDeck = this.compDeck.splice(0, 3);
           console.log('avversari:', this.compDeck);
@@ -49,5 +52,102 @@ export class ArenaComponent {
           console.error('Errore nel fetch:', error);
         });
     });
+  }
+
+  normalAttack() {
+    this.myDeck2[this.numRnd].stamina = 10;
+    this.compDeck[this.numRnd].vita -= this.myDeck2[this.numRnd].attacco_base;
+    this.myDeck2[this.numRnd].stamina -=
+      this.myDeck2[this.numRnd].consumo_stamina_attacco_base;
+    this.isDisableToggle();
+    if (this.compDeck[this.numRnd].vita < 1) {
+      this.compDeck[this.numRnd].vita = 0;
+      this.compDeck[this.numRnd].stamina = 0;
+
+      this.compDeck[this.numRnd].path =
+        'https://t3.ftcdn.net/jpg/01/15/89/20/240_F_115892005_HMEE0k02qxE2PMgSoEuulFNokLEvP7kW.jpg';
+      this.compDeck[this.numRnd].attacco_base = 0;
+      this.compDeck[this.numRnd].attacco_speciale = 0;
+      this.isDisableToggle();
+    }
+    if (this.compDeck[this.numRnd].vita < 1) {
+      if (this.myDeck2[this.numRnd].stamina < 1) {
+        this.myDeck2[this.numRnd].stamina = 0;
+      }
+    } else {
+      if (this.myDeck2[this.numRnd].stamina < 1) {
+        this.myDeck2[this.numRnd].stamina = 0;
+        this.myDeck2[this.numRnd].attacco_base = 0;
+        this.myDeck2[this.numRnd].attacco_speciale = 0;
+        this.myDeck2[this.numRnd].stamina = 50;
+        this.myDeck2[this.numRnd].stamina -=
+          this.myDeck2[this.numRnd].consumo_stamina_attacco_base;
+      }
+      if (this.myDeck2[this.numRnd].stamina > 1) {
+        this.myDeck2[this.numRnd].attacco_base =
+          this.myDeck3[this.numRnd].attacco_base;
+        this.myDeck2[this.numRnd].attacco_speciale =
+          this.myDeck3[this.numRnd].attacco_speciale;
+        console.log(this.myDeck3[this.numRnd].attacco_speciale);
+      }
+    }
+  }
+
+  specialAttack() {
+    this.compDeck[this.numRnd].vita -=
+      this.myDeck2[this.numRnd].attacco_speciale;
+    this.myDeck2[this.numRnd].stamina -=
+      this.myDeck2[this.numRnd].consumo_stamina_attacco_speciale;
+    if (this.compDeck[this.numRnd].vita < 1) {
+      this.compDeck[this.numRnd].vita = 0;
+      this.compDeck[this.numRnd].stamina = 0;
+
+      this.compDeck[this.numRnd].path =
+        'https://t3.ftcdn.net/jpg/01/15/89/20/240_F_115892005_HMEE0k02qxE2PMgSoEuulFNokLEvP7kW.jpg';
+      this.compDeck[this.numRnd].attacco_speciale = 0;
+      this.compDeck[this.numRnd].attacco_base = 0;
+      this.isDisableToggle();
+    }
+    this.isDisableToggle();
+  }
+
+  compNormalAttack() {
+    this.myDeck2[this.numRnd].vita -= this.compDeck[this.numRnd].attacco_base;
+    this.compDeck[this.numRnd].stamina -=
+      this.compDeck[this.numRnd].consumo_stamina_attacco_base;
+    this.isDisableToggle();
+    if (this.myDeck2[this.numRnd].vita < 1) {
+      this.myDeck2[this.numRnd].vita = 0;
+      this.myDeck2[this.numRnd].stamina = 0;
+
+      this.myDeck2[this.numRnd].path =
+        'https://t3.ftcdn.net/jpg/01/15/89/20/240_F_115892005_HMEE0k02qxE2PMgSoEuulFNokLEvP7kW.jpg';
+      this.myDeck2[this.numRnd].attacco_base = 0;
+      this.myDeck2[this.numRnd].attacco_speciale = 0;
+      this.isDisableToggle();
+    }
+  }
+
+  compSpecialAttack() {
+    this.myDeck2[this.numRnd].vita -=
+      this.compDeck[this.numRnd].attacco_speciale;
+    this.compDeck[this.numRnd].stamina -=
+      this.compDeck[this.numRnd].consumo_stamina_attacco_speciale;
+    if (this.myDeck2[this.numRnd].vita < 1) {
+      this.myDeck2[this.numRnd].vita = 0;
+      this.myDeck2[this.numRnd].stamina = 0;
+
+      this.myDeck2[this.numRnd].path =
+        'https://t3.ftcdn.net/jpg/01/15/89/20/240_F_115892005_HMEE0k02qxE2PMgSoEuulFNokLEvP7kW.jpg';
+      this.myDeck2[this.numRnd].attacco_speciale = 0;
+      this.myDeck2[this.numRnd].attacco_base = 0;
+      this.isDisableToggle();
+    }
+
+    this.isDisableToggle();
+  }
+
+  isDisableToggle() {
+    this.isDisable = !this.isDisable;
   }
 }

@@ -15,13 +15,25 @@
               <p class="card-text">
                 attacco base {{ myDeck2[numRnd].attacco_base }}
               </p>
-              <button *ngIf="isDisable" class="btn btn-primary">ATTACK</button>
+              <button
+                (click)="normalAttack()"
+                *ngIf="isDisable"
+                class="btn btn-primary"
+              >
+                ATTACK
+              </button>
             </div>
             <div class="d-flex justify-content-between align-items-center">
               <p class="card-text">
                 attacco speciale {{ myDeck2[numRnd].attacco_speciale }}
               </p>
-              <button *ngIf="isDisable" class="btn btn-primary">ATTACK</button>
+              <button
+                (click)="specialAttack()"
+                *ngIf="isDisable"
+                class="btn btn-primary"
+              >
+                ATTACK
+              </button>
             </div>
             <p class="card-text">stamina {{ myDeck2[numRnd].stamina }}</p>
             <p class="card-text">vita {{ myDeck2[numRnd].vita }}</p>
@@ -44,13 +56,25 @@
               <p class="card-text">
                 attacco base {{ compDeck[numRnd].attacco_base }}
               </p>
-              <button *ngIf="!isDisable" class="btn btn-primary">ATTACK</button>
+              <button
+                (click)="compNormalAttack()"
+                *ngIf="!isDisable"
+                class="btn btn-primary"
+              >
+                ATTACK
+              </button>
             </div>
             <div class="d-flex justify-content-between align-items-center">
               <p class="card-text">
                 attacco speciale {{ compDeck[numRnd].attacco_speciale }}
               </p>
-              <button *ngIf="!isDisable" class="btn btn-primary">ATTACK</button>
+              <button
+                (click)="compSpecialAttack()"
+                *ngIf="!isDisable"
+                class="btn btn-primary"
+              >
+                ATTACK
+              </button>
             </div>
             <p class="card-text">stamina {{ compDeck[numRnd].stamina }}</p>
             <p class="card-text">vita {{ compDeck[numRnd].vita }}</p>
